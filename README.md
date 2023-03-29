@@ -15,7 +15,9 @@
 The program encrypts, decrypts and breaks the Vigenère cipher. 
 The program encrypts the text by shifting the letters by the number specified by the key (as in the Caesar cipher). Decryption involves reversing the encryption algorithm.
 The most interesting for me was the process of breaking the ciphertext. I used frequency analysis to guess the length and content of the key. The algorithm counts the frequency of the model text (the result of counting letters in The Master and Margarita by Mikhail Bulgakov is shown in the image below).
+
 ![Frequency schema](./images/schema.jpg)
+
 Then the program compares the result of counting the ciphertext, extending the length of the searched key. For the wrong key, the histogram differences are large. When the histograms are almost the same, the key has been found and we can decrypt the text.
 
 
