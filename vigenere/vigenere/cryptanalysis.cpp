@@ -10,7 +10,7 @@ int alphabet()
 std::string cryptanalysis(const std::string& ciphertext)
 {
     std::string text = "";
-    const std::string example_text = file_input("../texts/the-master-and-margarita.txt");
+    const std::string example_text = file_input("../texts/cryptanalysis/model_text.txt");
     std::vector<double> vector_example = frequency_vector(example_text, 1, 0);
     std::size_t ciphertext_length = ciphertext.length();
     std::vector<double> vector_of_shift;
