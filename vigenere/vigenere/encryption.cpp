@@ -8,7 +8,6 @@ int alphabet()
 
 std::string encryption(const std::string& text, const std::string& key)
 {
-    //std::vector<double> czesto = zliczanie_czestotliwosci(text, 1, 0);
     std::string ciphertext = "";
     const std::string fixed_key = fix_text(key);
     const std::size_t key_length = fixed_key.length();

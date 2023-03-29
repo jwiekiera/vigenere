@@ -1,2 +1,7 @@
-﻿  vigenere.cpp
+﻿  cryptanalysis.cpp
+  decrypting.cpp
+  encryption.cpp
+  functions.cpp
+  vigenere.cpp
+  Generating Code...
   vigenere.vcxproj -> C:\Users\Asia\Desktop\github\vigenere\vigenere\x64\Debug\vigenere.exe

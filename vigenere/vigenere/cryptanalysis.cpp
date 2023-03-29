@@ -17,7 +17,7 @@ std::string cryptanalysis(const std::string& ciphertext)
 
     bool if_key_was_found = false;
     int key_length = 1;
-    while (!if_key_was_found and key_length <= ciphertext_length) //dopóki nie odnaleziono klucza lub tekst siê nie skoñczy³
+    while (!if_key_was_found and key_length <= ciphertext_length) //until a key is found or the text ends
     {
         for (int i = 0; i < key_length; i++)
         {
@@ -88,7 +88,7 @@ int finding_key(const std::vector<double>& vector_ciphertext, const std::vector<
 
         for (int j = i; j < i + alphabet(); j++)
         {
-            analyzed_vector.push_back(vector_ciphertext[j % alphabet()]);         //j % alfabet() -> 26 % 26 = 0 ("zapêtlenie" indeksu wektora)
+            analyzed_vector.push_back(vector_ciphertext[j % alphabet()]);         //j % alphabet() -> 26 % 26 = 0 ("looping" vector index)
         }
         if (match_histograms(analyzed_vector, example_vector))
         {
@@ -106,7 +106,7 @@ bool match_histograms(const std::vector<double>& vector_ciphertext, const std::v
         double columns_differences = vector_ciphertext[i] - example_vector[i];
         sum_of_differences += pow(columns_differences, 2);
     }
-    if (sum_of_differences < 0.001)   //gdy histogramy s¹ dopasowane, wartoœæ wyraŸnie spada (np. niedopasowane - 0.0630293, dopasowane - 0.000559347) 
+    if (sum_of_differences < 0.001)   //when the histograms are matched, the value is very small (e.g. unmatched - 0.0630293, matched - 0.000559347)
     {
         return true;
     }
