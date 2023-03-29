@@ -56,5 +56,5 @@ Project is _complete_
 
 
 ## Contact
-Created by [@jwiekieral](https://github.com/jwiekiera) - feel free to contact me!
+Created by [@jwiekiera](https://github.com/jwiekiera) - feel free to contact me!
 
